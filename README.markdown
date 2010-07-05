@@ -24,11 +24,14 @@ This category takes an image (presumably flat and solid-coloured, like a toolbar
 This is very useful for generating multiple different-coloured versions of the same image, for example 'disabled' or 'highlighted' states of the same basic image, without having to make multiple different-coloured bitmap image files.
 
 
+License
+-------
+
 The license for the code is included with this project; it's basically a BSD license with attribution.
 
 I can't answer any questions about how to use the code, but I always welcome emails telling me that you're using it or just saying thanks. I hope you find it useful!
 
 
-Cheers,
-Matt Legend Gemmell
-http://mattgemmell.com/
+Cheers,  
+Matt Legend Gemmell  
+http://mattgemmell.com/  
