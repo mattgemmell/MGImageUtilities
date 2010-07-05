@@ -8,6 +8,7 @@ UIImage+ProportionalFill
 ------------------------
 
 This category lets you resize an arbitrary image to fit into an arbitrary size, using one of four resizing methods:
+
 - Scale: scales the image proportionally to fit entirely into the required size.
 - Crop: scales the image proportionally to completely fill the required size, cropping towards its center. This is the most useful method.
 - Start: as for Crop, but crops towards the "start" of the image (the top or left, depending on relative aspect ratios).
