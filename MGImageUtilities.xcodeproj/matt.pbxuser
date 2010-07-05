@@ -26,7 +26,6 @@
 		activeSDKPreference = iphonesimulator4.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* MGImageUtilities */;
 		addToTargets = (
-			1D6058900D05DD3D006BFB54 /* MGImageUtilities */,
 		);
 		codeSenseManager = C901793011E13130002B9BA3 /* Code sense */;
 		executables = (
@@ -55,20 +54,24 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 300009815;
-			PBXWorkspaceStateSaveDate = 300009815;
+			PBXPerProjectTemplateStateSaveDate = 300012087;
+			PBXWorkspaceStateSaveDate = 300012087;
 		};
 		perUserProjectItems = {
-			C901795811E1357E002B9BA3 /* PBXTextBookmark */ = C901795811E1357E002B9BA3 /* PBXTextBookmark */;
-			C901795A11E1357E002B9BA3 /* PBXTextBookmark */ = C901795A11E1357E002B9BA3 /* PBXTextBookmark */;
-			C901798611E13A73002B9BA3 /* PBXBookmark */ = C901798611E13A73002B9BA3 /* PBXBookmark */;
-			C901798911E13A73002B9BA3 /* PBXTextBookmark */ = C901798911E13A73002B9BA3 /* PBXTextBookmark */;
-			C9017A1311E14592002B9BA3 /* PBXTextBookmark */ = C9017A1311E14592002B9BA3 /* PBXTextBookmark */;
-			C9017A7F11E14AD6002B9BA3 /* PBXTextBookmark */ = C9017A7F11E14AD6002B9BA3 /* PBXTextBookmark */;
-			C9017A8711E14BC5002B9BA3 /* PBXTextBookmark */ = C9017A8711E14BC5002B9BA3 /* PBXTextBookmark */;
-			C9017A8811E14BC5002B9BA3 /* PBXTextBookmark */ = C9017A8811E14BC5002B9BA3 /* PBXTextBookmark */;
-			C9D4927E11E1D09400B63B06 /* PBXTextBookmark */ = C9D4927E11E1D09400B63B06 /* PBXTextBookmark */;
-			C9D4928011E1D0B600B63B06 /* PBXTextBookmark */ = C9D4928011E1D0B600B63B06 /* PBXTextBookmark */;
+			C901795811E1357E002B9BA3 = C901795811E1357E002B9BA3 /* PBXTextBookmark */;
+			C901795A11E1357E002B9BA3 = C901795A11E1357E002B9BA3 /* PBXTextBookmark */;
+			C901798611E13A73002B9BA3 = C901798611E13A73002B9BA3 /* PBXBookmark */;
+			C901798911E13A73002B9BA3 = C901798911E13A73002B9BA3 /* PBXTextBookmark */;
+			C9017A1311E14592002B9BA3 = C9017A1311E14592002B9BA3 /* PBXTextBookmark */;
+			C9017A7F11E14AD6002B9BA3 = C9017A7F11E14AD6002B9BA3 /* PBXTextBookmark */;
+			C9017A8711E14BC5002B9BA3 = C9017A8711E14BC5002B9BA3 /* PBXTextBookmark */;
+			C9017A8811E14BC5002B9BA3 = C9017A8811E14BC5002B9BA3 /* PBXTextBookmark */;
+			C9D4927E11E1D09400B63B06 = C9D4927E11E1D09400B63B06 /* PBXTextBookmark */;
+			C9D4928011E1D0B600B63B06 = C9D4928011E1D0B600B63B06 /* PBXTextBookmark */;
+			C9D4928811E1D23B00B63B06 /* PBXTextBookmark */ = C9D4928811E1D23B00B63B06 /* PBXTextBookmark */;
+			C9D4929611E1D4EF00B63B06 /* PBXTextBookmark */ = C9D4929611E1D4EF00B63B06 /* PBXTextBookmark */;
+			C9D4929711E1D4EF00B63B06 /* PBXTextBookmark */ = C9D4929711E1D4EF00B63B06 /* PBXTextBookmark */;
+			C9D4929811E1D4EF00B63B06 /* PBXTextBookmark */ = C9D4929811E1D4EF00B63B06 /* PBXTextBookmark */;
 		};
 		sourceControlManager = C901792F11E13130002B9BA3 /* Source Control */;
 		userBuildSettings = {
@@ -188,6 +191,11 @@
 		vrLoc = 0;
 	};
 	C90179FF11E1424E002B9BA3 /* ReadMe.rtf */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.rtf;
+		name = ReadMe.rtf;
+		path = /Users/matt/Documents/Development/Sourcecode/MGImageUtilities/ReadMe.rtf;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1028, 993}}";
 			sepNavSelRange = "{1916, 0}";
@@ -252,6 +260,53 @@
 		rLoc = 1916;
 		rType = 0;
 		vrLen = 1969;
+		vrLoc = 0;
+	};
+	C9D4928811E1D23B00B63B06 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C90179FF11E1424E002B9BA3 /* ReadMe.rtf */;
+		name = "ReadMe.rtf: 24";
+		rLen = 0;
+		rLoc = 1916;
+		rType = 0;
+		vrLen = 1969;
+		vrLoc = 0;
+	};
+	C9D4929311E1D29A00B63B06 /* README.markdown */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1980, 955}}";
+			sepNavSelRange = "{2043, 0}";
+			sepNavVisRange = "{0, 2043}";
+		};
+	};
+	C9D4929611E1D4EF00B63B06 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9D4929311E1D29A00B63B06 /* README.markdown */;
+		name = "README.markdown: 1";
+		rLen = 0;
+		rLoc = 2043;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	C9D4929711E1D4EF00B63B06 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9D4929311E1D29A00B63B06 /* README.markdown */;
+		name = "README.markdown: 38";
+		rLen = 0;
+		rLoc = 2043;
+		rType = 0;
+		vrLen = 2043;
+		vrLoc = 0;
+	};
+	C9D4929811E1D4EF00B63B06 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9D4929311E1D29A00B63B06 /* README.markdown */;
+		name = "README.markdown: 38";
+		rLen = 0;
+		rLoc = 2043;
+		rType = 0;
+		vrLen = 2043;
 		vrLoc = 0;
 	};
 }

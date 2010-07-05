@@ -36,7 +36,7 @@
 		C901795511E1354F002B9BA3 /* Source Code License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Source Code License.rtf"; sourceTree = "<group>"; };
 		C901797911E1398F002B9BA3 /* original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = original.png; sourceTree = "<group>"; };
 		C901798311E13A4C002B9BA3 /* original.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = original.psd; sourceTree = "<group>"; };
-		C90179FF11E1424E002B9BA3 /* ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
+		C9D4929311E1D29A00B63B06 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				C90179FF11E1424E002B9BA3 /* ReadMe.rtf */,
+				C9D4929311E1D29A00B63B06 /* README.markdown */,
 				C901795511E1354F002B9BA3 /* Source Code License.rtf */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
