@@ -13,8 +13,15 @@
 
 - (UIImage *)imageToFitSize:(CGSize)fitSize method:(MGImageResizingMethod)resizeMethod
 {
-    float sourceWidth = [self size].width * self.scale;
-    float sourceHeight = [self size].height * self.scale;
+	float imageScaleFactor = 1.0;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 40000
+	if ([self respondsToSelector:@selector(scale)]) {
+		imageScaleFactor = [self scale];
+	}
+#endif
+	
+    float sourceWidth = [self size].width * imageScaleFactor;
+    float sourceHeight = [self size].height * imageScaleFactor;
     float targetWidth = fitSize.width;
     float targetHeight = fitSize.height;
     BOOL cropping = !(resizeMethod == MGImageResizeScale);
@@ -81,14 +88,32 @@
     }
     
     // Create appropriately modified image.
-	UIImage *image;
-	UIGraphicsBeginImageContextWithOptions(destRect.size, NO, 0.0); // 0.0 for scale means "correct scale for device's main screen".
-	CGImageRef sourceImg = CGImageCreateWithImageInRect([self CGImage], sourceRect); // cropping happens here.
-	image = [UIImage imageWithCGImage:sourceImg scale:0.0 orientation:self.imageOrientation]; // create cropped UIImage.
-	[image drawInRect:destRect]; // the actual scaling happens here, and orientation is taken care of automatically.
-	CGImageRelease(sourceImg);
-	image = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
+	UIImage *image = nil;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 40000
+	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 4.0) {
+		UIGraphicsBeginImageContextWithOptions(destRect.size, NO, 0.0); // 0.0 for scale means "correct scale for device's main screen".
+		CGImageRef sourceImg = CGImageCreateWithImageInRect([self CGImage], sourceRect); // cropping happens here.
+		image = [UIImage imageWithCGImage:sourceImg scale:0.0 orientation:self.imageOrientation]; // create cropped UIImage.
+		[image drawInRect:destRect]; // the actual scaling happens here, and orientation is taken care of automatically.
+		CGImageRelease(sourceImg);
+		image = UIGraphicsGetImageFromCurrentImageContext();
+		UIGraphicsEndImageContext();
+	}
+#endif
+	if (!image) {
+		// Try older method.
+		CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+		CGContextRef context = CGBitmapContextCreate(NULL, fitSize.width, fitSize.height, 8, (fitSize.width * 4), 
+													 colorSpace, kCGImageAlphaPremultipliedLast);
+		CGImageRef sourceImg = CGImageCreateWithImageInRect([self CGImage], sourceRect);
+		CGContextDrawImage(context, destRect, sourceImg);
+		CGImageRelease(sourceImg);
+		CGImageRef finalImage = CGBitmapContextCreateImage(context);	
+		CGContextRelease(context);
+		CGColorSpaceRelease(colorSpace);
+		image = [UIImage imageWithCGImage:finalImage];
+		CGImageRelease(finalImage);
+	}
 	
     return image;
 }
