@@ -48,6 +48,9 @@
     }
     float scaleFactor = scaledHeight / sourceHeight;
     
+	DebugLog(@"%@", [NSNumber numberWithBool:cropping]);
+	DebugLog(@"%f %f", scaledWidth, scaledHeight);
+	
     // Calculate compositing rectangles
     CGRect sourceRect, destRect;
     if (cropping) {
@@ -103,7 +106,7 @@
 	if (!image) {
 		// Try older method.
 		CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-		CGContextRef context = CGBitmapContextCreate(NULL, fitSize.width, fitSize.height, 8, (fitSize.width * 4), 
+		CGContextRef context = CGBitmapContextCreate(NULL, scaledWidth, scaledHeight, 8, (fitSize.width * 4), 
 													 colorSpace, kCGImageAlphaPremultipliedLast);
 		CGImageRef sourceImg = CGImageCreateWithImageInRect([self CGImage], sourceRect);
 		CGContextDrawImage(context, destRect, sourceImg);
