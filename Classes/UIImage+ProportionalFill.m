@@ -48,9 +48,6 @@
     }
     float scaleFactor = scaledHeight / sourceHeight;
     
-	DebugLog(@"%@", [NSNumber numberWithBool:cropping]);
-	DebugLog(@"%f %f", scaledWidth, scaledHeight);
-	
     // Calculate compositing rectangles
     CGRect sourceRect, destRect;
     if (cropping) {
